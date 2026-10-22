@@ -1,0 +1,1 @@
+"""Allocation domain schema package."""

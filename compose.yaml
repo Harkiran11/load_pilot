@@ -1,0 +1,117 @@
+name: ${COMPOSE_PROJECT_NAME:-loadpilot}
+
+x-python: &python
+  image: ${LOADPILOT_PYTHON_IMAGE:-loadpilot-python:local}
+  pull_policy: never
+
+# .env.example holds working defaults; .env is optional and overrides them.
+x-service-env: &service-env
+  - path: .env.example
+  - path: ${LOADPILOT_ENV_FILE:-.env}
+    required: false
+
+x-health: &health
+  interval: 10s
+  timeout: 30s
+  retries: 12
+  start_period: 40s
+
+services:
+  model:
+    <<: *python
+    env_file: *service-env
+    working_dir: /app/model
+    environment:
+      LOADPILOT_MODEL_BUNDLE: /artifacts/models/${MODEL_BUNDLE_NAME:-freight-rpm-v1}
+      LOADPILOT_HISTORICAL_RANGE_ARTIFACT: /artifacts/baselines/${MODEL_RANGE_NAME:-historical-range-v1.json}
+      MODEL_EXPECTED_VERSION: ${MODEL_EXPECTED_VERSION:-freight-rpm-v1}
+    command: [python, -m, uvicorn, 'loadpilot_model.api.app:app', --host, 0.0.0.0, --port, '9000', --workers, '1']
+    volumes:
+      - type: bind
+        source: ${MODEL_ARTIFACTS_DIR:-./model/artifacts}
+        target: /artifacts
+        read_only: true
+        bind:
+          create_host_path: false
+    ports:
+      - "${BIND_ADDRESS:-127.0.0.1}:${MODEL_PORT:-9000}:9000"
+    healthcheck:
+      <<: *health
+      test: [CMD, python, /app/docker/healthcheck.py, model]
+    restart: unless-stopped
+    stop_grace_period: 30s
+
+  # Creates the database on first run, then applies migrations on every run.
+  # The bundled seed is a captured demo dataset so the UI has something to show
+  # without a live board.
+  migrate:
+    <<: *python
+    env_file: *service-env
+    environment:
+      DISPATCHER_DATABASE_URL: sqlite:////var/lib/loadpilot/dispatcher.db
+    command:
+      - sh
+      - -c
+      - |
+        set -e
+        if [ ! -f /var/lib/loadpilot/dispatcher.db ]; then
+          echo "Seeding the demo database"
+          cp /seed/seed.db /var/lib/loadpilot/dispatcher.db
+        fi
+        python -m alembic upgrade head
+    volumes:
+      - dispatcher-db:/var/lib/loadpilot
+      - ${BACKEND_HISTORY_DIR:-./backend/data}:/seed:ro
+    restart: 'no'
+
+  backend:
+    <<: *python
+    build:
+      context: .
+      dockerfile: docker/python.Dockerfile
+    env_file: *service-env
+    environment:
+      DISPATCHER_DATABASE_URL: sqlite:////var/lib/loadpilot/dispatcher.db
+      # Empty means offline: the bundled dataset is served, live ingestion is off.
+      EXTERNAL_API_URL: ${EXTERNAL_API_URL:-}
+      MODEL_API_URL: http://model:9000
+    volumes:
+      - dispatcher-db:/var/lib/loadpilot
+      - ${BACKEND_HISTORY_DIR:-./backend/data}:/history:ro
+      - type: bind
+        source: ${MODEL_ARTIFACTS_DIR:-./model/artifacts}
+        target: /artifacts
+        read_only: true
+        bind:
+          create_host_path: false
+    ports:
+      - "${BIND_ADDRESS:-127.0.0.1}:${BACKEND_PORT:-8000}:8000"
+    depends_on:
+      model:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      <<: *health
+      test: [CMD, python, /app/docker/healthcheck.py, backend]
+    restart: unless-stopped
+    stop_grace_period: 60s
+
+  frontend:
+    image: ${LOADPILOT_FRONTEND_IMAGE:-loadpilot-frontend:local}
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    ports:
+      - "${BIND_ADDRESS:-127.0.0.1}:${FRONTEND_PORT:-5173}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      <<: *health
+      test: [CMD, wget, -q, -O, /dev/null, 'http://127.0.0.1/']
+    restart: unless-stopped
+    stop_grace_period: 15s
+
+volumes:
+  dispatcher-db:

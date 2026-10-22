@@ -1,0 +1,1 @@
+"""Analytics domain schema package."""

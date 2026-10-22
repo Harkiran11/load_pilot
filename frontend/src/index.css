@@ -1,0 +1,507 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* shadcn primitives follow the existing daisyUI light/dark theme. */
+:root, [data-theme] {
+  --background: var(--color-base-100);
+  --foreground: var(--color-base-content);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-primary-content);
+  --secondary-foreground: var(--color-secondary-content);
+  --accent-foreground: var(--color-accent-content);
+  --popover: var(--color-base-100);
+  --popover-foreground: var(--color-base-content);
+  --muted: var(--color-base-200);
+  --muted-foreground: color-mix(in srgb, var(--color-base-content) 65%, transparent);
+  --border-color: var(--color-base-300);
+  --input: var(--color-base-300);
+  --ring: var(--color-primary);
+  --destructive: var(--color-error);
+  --destructive-foreground: var(--color-error-content);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border-color);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+}
+
+/* Animate interactions and newly opened views, never incoming data values. */
+:root {
+  --motion-fast: 140ms;
+  --motion-standard: 200ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.app-shell,
+.app-shell :where(header, main, section, article, aside, .bg-base-100, .bg-base-200),
+:where(dialog, button, a, input, select, textarea, summary, .terminal-globe-code) {
+  transition-property: color, background-color, border-color, box-shadow, opacity;
+  transition-duration: var(--motion-fast);
+  transition-timing-function: ease-out;
+}
+
+@keyframes app-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes app-panel-enter {
+  from { opacity: 0; transform: translateY(4px) scale(0.995); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes load-panel-enter {
+  from { opacity: 0; transform: translateX(16px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.app-page, .app-page-title {
+  animation: app-fade-in var(--motion-standard) ease-out;
+}
+
+dialog[open]:not(.load-details-panel), .app-notification {
+  animation: app-panel-enter var(--motion-standard) var(--motion-ease);
+}
+
+.load-details-panel[open] {
+  animation: load-panel-enter var(--motion-standard) var(--motion-ease);
+}
+
+/* Reserve the classic scrollbar gutter so opening a modal (which locks body
+   scrolling) cannot widen the document and shift the whole page sideways.
+   daisyUI sets `scrollbar-gutter` on `:root` from `@layer base`; this rule is
+   emitted into the utilities layer so it wins. */
+@utility page-gutter {
+  scrollbar-gutter: stable;
+}
+dialog[open]::backdrop,
+details[open] > :not(summary),
+#load-board-autopilot-settings:not([hidden]) {
+  animation: app-fade-in var(--motion-fast) ease-out;
+}
+
+.app-sidebar {
+  display: grid;
+  min-width: 0;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  opacity: 0;
+  transition: grid-template-rows var(--motion-standard) var(--motion-ease),
+    opacity var(--motion-fast) ease-out,
+    visibility 0s linear var(--motion-standard),
+    background-color var(--motion-fast) ease-out;
+}
+
+.app-sidebar-content {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.app-shell[data-sidebar-open='true'] .app-sidebar {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.app-metric-card {
+  transition: translate var(--motion-fast) ease-out,
+    border-color var(--motion-fast) ease-out,
+    background-color var(--motion-fast) ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .app-metric-card:hover { translate: 0 -1px; }
+  .app-shell .card:hover { border-color: color-mix(in srgb, var(--color-primary) 30%, var(--color-base-300)); }
+}
+
+@media (min-width: 1024px) {
+  .app-shell {
+    display: grid;
+    grid-template-columns: 0rem minmax(0, 1fr);
+    transition: grid-template-columns var(--motion-standard) var(--motion-ease),
+      background-color var(--motion-fast) ease-out;
+  }
+  .app-shell[data-sidebar-open='true'] { grid-template-columns: 16rem minmax(0, 1fr); }
+  .app-sidebar {
+    position: sticky;
+    top: 0;
+    display: block;
+    height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-right: 1px solid var(--color-base-300);
+  }
+  .app-sidebar-content { width: 16rem; overflow: visible; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@plugin "daisyui" {
+  themes: false;
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f3f7ff;
+  --color-base-300: #dbe7f5;
+  --color-base-content: #172b4d;
+  --color-primary: #1d4ed8;
+  --color-primary-content: #ffffff;
+  --color-secondary: #1e40af;
+  --color-secondary-content: #ffffff;
+  --color-accent: #0369a1;
+  --color-accent-content: #ffffff;
+  --color-neutral: #183153;
+  --color-neutral-content: #eff6ff;
+  --color-info: #0369a1;
+  --color-info-content: #ffffff;
+  --color-success: #15803d;
+  --color-success-content: #ffffff;
+  --color-warning: #fbbf24;
+  --color-warning-content: #422006;
+  --color-error: #b91c1c;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: false;
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #112442;
+  --color-base-200: #0b172c;
+  --color-base-300: #253f63;
+  --color-base-content: #e5efff;
+  --color-primary: #60a5fa;
+  --color-primary-content: #07162d;
+  --color-secondary: #93c5fd;
+  --color-secondary-content: #102344;
+  --color-accent: #38bdf8;
+  --color-accent-content: #082f49;
+  --color-neutral: #1b3559;
+  --color-neutral-content: #e5efff;
+  --color-info: #38bdf8;
+  --color-info-content: #082f49;
+  --color-success: #4ade80;
+  --color-success-content: #052e16;
+  --color-warning: #fbbf24;
+  --color-warning-content: #422006;
+  --color-error: #f87171;
+  --color-error-content: #450a0a;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+/* Additional history states keep distinct hues in both themes. */
+.badge.bid-status-expired {
+  background-color: #ffedd5;
+  color: #9a3412;
+  border-color: #fed7aa;
+}
+.badge.bid-status-lost {
+  background-color: #ede9fe;
+  color: #5b21b6;
+  border-color: #ddd6fe;
+}
+.badge.bid-status-completed {
+  background-color: #ccfbf1;
+  color: #115e59;
+  border-color: #99f6e4;
+}
+[data-theme='dark'] .badge.bid-status-expired {
+  background-color: #431407;
+  color: #fdba74;
+  border-color: #9a3412;
+}
+[data-theme='dark'] .badge.bid-status-lost {
+  background-color: #2e1065;
+  color: #c4b5fd;
+  border-color: #6d28d9;
+}
+[data-theme='dark'] .badge.bid-status-completed {
+  background-color: #042f2e;
+  color: #5eead4;
+  border-color: #0f766e;
+}
+
+.globe-land {
+  fill: var(--color-base-200);
+  stroke: color-mix(in srgb, var(--color-base-content) 20%, transparent);
+  stroke-width: 0.7;
+}
+.globe-country-borders, .globe-region-borders {
+  fill: none;
+  stroke: var(--color-base-content);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.globe-country-borders { stroke-width: 0.7; opacity: 0.24; }
+.globe-region-borders { stroke-width: 0.5; opacity: 0.16; }
+
+.terminal-globe-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.terminal-globe-position {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.terminal-globe-marker {
+  display: inline-flex;
+  width: 88px;
+  height: 46px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.terminal-globe-code {
+  max-width: 88px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--color-base-100) 90%, transparent);
+  padding: 2px 5px;
+  color: var(--color-base-content);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.terminal-globe-location {
+  fill: currentColor;
+  stroke: var(--color-base-100);
+  stroke-width: 2;
+}
+.terminal-globe-connector {
+  stroke: var(--color-base-content);
+  stroke-width: 0.8;
+  opacity: 0.35;
+}
+.terminal-globe-marker:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+.terminal-globe-marker:hover .terminal-globe-code {
+  background: var(--color-base-200);
+}
+.terminal-globe-marker[aria-pressed='true'] .terminal-globe-code {
+  background: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+/* Trip flow ---------------------------------------------------------------- */
+
+.trip-flow-lane {
+  fill: none;
+  stroke-linecap: round;
+  stroke-width: 1.3;
+}
+/* A booked-but-not-moving lane is a faint solid line. Animated dashes on
+   every lane were the "dotted line" noise and cost a repaint per frame. */
+.trip-flow-lane.is-scheduled {
+  stroke: color-mix(in srgb, var(--color-warning) 60%, transparent);
+  opacity: 0.32;
+}
+.trip-flow-lane.is-rolling {
+  stroke: url(#trip-flow-lane);
+  stroke-width: 1.8;
+  opacity: 0.78;
+}
+.trip-flow-head {
+  fill: var(--color-primary);
+  opacity: 0.16;
+}
+.trip-flow-head.is-selected {
+  opacity: 0.4;
+}
+.trip-flow-shipment {
+  fill: var(--color-base-100);
+  stroke: var(--color-primary);
+  stroke-width: 2.4;
+}
+.trip-flow-shipment.is-selected {
+  stroke: var(--color-secondary);
+}
+.terminal-globe-traffic {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  min-width: 15px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  padding: 0 4px;
+  color: var(--color-primary-content);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+}
+.terminal-globe-marker--busy .terminal-globe-code {
+  border: 1px solid color-mix(in srgb, var(--color-primary) 45%, transparent);
+}
+.trip-flow-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-base-content) 12%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-base-100) 88%, transparent);
+  padding: 3px 9px;
+  color: var(--color-base-content);
+  font-size: 11px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+.trip-flow-pill--demo {
+  border-color: color-mix(in srgb, var(--color-warning) 55%, transparent);
+  color: color-mix(in srgb, var(--color-warning) 80%, var(--color-base-content));
+}
+.trip-flow-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid color-mix(in srgb, var(--color-base-content) 12%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-base-100) 88%, transparent);
+  padding: 3px 10px;
+  color: var(--color-base-content);
+  font-size: 11px;
+  font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+.trip-flow-control:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
+  color: var(--color-primary);
+}
+.trip-flow-control[aria-pressed='false'] {
+  color: var(--color-primary);
+}
+.trip-flow-legend {
+  display: inline-block;
+  width: 18px;
+  height: 0;
+  border-top-width: 2px;
+  border-radius: 2px;
+}
+.trip-flow-legend.is-rolling { border-top-style: solid; border-top-color: var(--color-primary); }
+.trip-flow-legend.is-scheduled { border-top-style: solid; border-top-width: 1px; border-top-color: color-mix(in srgb, var(--color-warning) 60%, transparent); }
+
+/* Shipment stage rail and trip progress ------------------------------------- */
+
+.shipment-rail {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.shipment-rail-step {
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+}
+.shipment-rail-step::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  background: color-mix(in srgb, var(--color-base-content) 15%, transparent);
+}
+.shipment-rail-step:first-child::before { display: none; }
+.shipment-rail-step.is-done::before { background: color-mix(in srgb, var(--color-primary) 65%, transparent); }
+.shipment-rail-dot {
+  position: relative;
+  z-index: 1;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--color-base-100);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--color-base-content) 20%, transparent);
+}
+.shipment-rail-step.is-done .shipment-rail-dot {
+  background: var(--color-primary);
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+}
+.shipment-rail-step.is-current .shipment-rail-dot {
+  outline: 2px solid color-mix(in srgb, var(--color-primary) 35%, transparent);
+  outline-offset: 1px;
+}
+.shipment-rail-name {
+  font-size: 9px;
+  line-height: 1.1;
+  color: color-mix(in srgb, var(--color-base-content) 55%, transparent);
+  white-space: nowrap;
+}
+.shipment-rail-step.is-done .shipment-rail-name { color: var(--color-base-content); }
+
+.shipment-progress {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-base-content) 12%, transparent);
+}
+.shipment-progress-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--color-primary) 60%, transparent), var(--color-primary));
+  transition: width 240ms linear;
+}
+.shipment-progress.is-complete .shipment-progress-fill { background: var(--color-success); }
+.shipment-progress.is-overdue .shipment-progress-fill { background: var(--color-error); }
+@media (prefers-reduced-motion: reduce) {
+  .shipment-progress-fill { transition: none; }
+}

@@ -1,0 +1,1 @@
+"""Terminal domain service package."""

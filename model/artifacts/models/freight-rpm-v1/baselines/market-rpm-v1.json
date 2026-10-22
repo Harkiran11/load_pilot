@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "baseline_id": "prebid_market_rpm",
+  "units": "USD per loaded mile",
+  "formula": "predicted_bid_rpm = approved_prebid_quote.market_rpm; no fitting",
+  "approved_sources": [],
+  "max_age_seconds": null,
+  "source_sha256": "c0fcd88d358007fdeebadbb1e01dea069696ba9aec9eac4dcca6f57489f31a4c",
+  "current_dataset_status": "unavailable",
+  "reason": "CSV RPM helpers are offer-derived; no independent pre-bid market feed/snapshots supplied",
+  "excluded_sources": [
+    "historical_csv.market_rpm",
+    "historical_csv.all_in_rpm"
+  ],
+  "required_quote_fields": [
+    "source_id",
+    "quote_id",
+    "shipment_id",
+    "lane_id",
+    "market_rpm",
+    "currency",
+    "rate_basis",
+    "observed_at",
+    "available_at"
+  ],
+  "availability_policy": "observed_at <= available_at <= decision_at; timezone-aware; observed quote age <= configured max_age_seconds",
+  "registration_policy": "Only a trusted adapter with reviewed independent pre-bid provenance may register sources and issue observation/availability timestamps",
+  "unavailable_policy": "Return no RPM; caller may apply a separately configured global/lane fallback or REVIEW",
+  "heldout_policy": "No validation/test files read or metrics calculated"
+}

@@ -1,0 +1,8 @@
+{
+  "input_features": 114,
+  "hidden_sizes": [
+    32,
+    16
+  ],
+  "min_rpm": 0.0001
+}

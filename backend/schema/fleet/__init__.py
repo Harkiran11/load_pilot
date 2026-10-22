@@ -1,0 +1,1 @@
+"""Fleet domain schema package."""

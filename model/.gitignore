@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.idea/
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Local datasets and generated model outputs
+/data/
+# Keep the small, frozen serving bundle in the repo for one-command Docker runs.
+# Generated datasets, research outputs and other model versions stay ignored.
+/artifacts/*
+!/artifacts/models/
+/artifacts/models/*
+!/artifacts/models/freight-rpm-v1/
+!/artifacts/baselines/
+/artifacts/baselines/*
+!/artifacts/baselines/historical-range-v1.json
+/runs/
+/requirements/

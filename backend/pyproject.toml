@@ -1,0 +1,26 @@
+[project]
+name = "loadpilot-backend"
+version = "0.1.0"
+description = "FastAPI backend for LoadPilot"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "alembic>=1.14,<2.0",
+    "fastapi>=0.115,<1.0",
+    "httpx>=0.28,<1.0",
+    "pydantic>=2.10,<3.0",
+    "python-dotenv>=1.0,<2.0",
+    "sqlalchemy>=2.0,<3.0",
+    "loadpilot-model[api]",
+    "uvicorn>=0.34,<1.0",
+    "websockets>=15,<17",
+]
+
+[dependency-groups]
+dev = []
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+loadpilot-model = { path = "../model", editable = true }

@@ -1,0 +1,24 @@
+{
+  "plan_sha256": "8fb62a2832db164019217a7bccc1cf75eea5dd4a779ebf6f0c98359952174384",
+  "checkpoint_sha256": "417fbbde158338af51b1d15e579b0a283130f8b253d150f28ac9cb81c0c27498",
+  "test_arrays_sha256": "47bb82f8af93d78f832f008fb3a90e16dfb6ca8f7ac05015da9fe217ce60b588",
+  "predictions_sha256": "5aa3d66aaac82f2766db43fcaef97615903b0089393b761006f2003876610a66",
+  "test_date_min": "2026-07-06 08:36:47",
+  "test_date_max": "2026-09-27 20:17:47",
+  "metrics": {
+    "row_count": 163,
+    "huber_loss": 0.06028136633839344,
+    "mae_rpm": 0.2747731946425153,
+    "mae_dollars": 297.3483703612403,
+    "coverage": 1.0,
+    "mean_signed_error_rpm": -0.032071991489319565,
+    "mean_signed_error_dollars": -40.202709863024964
+  },
+  "absolute_gate_results": {
+    "coverage": true,
+    "rpm_mae": true,
+    "dollar_mae": true
+  },
+  "baseline_and_slice_gate_status": "pending section 4.8",
+  "release_status": "research only; no live approval"
+}

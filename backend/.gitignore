@@ -1,0 +1,5 @@
+data/*
+!data/seed.db
+!data/historical_shipments.csv
+/requirements/*
+!/requirements/database-schema.md

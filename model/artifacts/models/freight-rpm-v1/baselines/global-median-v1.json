@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "baseline_id": "global_median_bid_rpm",
+  "fit_partition": "train",
+  "median_bid_rpm": 2.9090003985451105,
+  "training_row_count": 756,
+  "units": "USD per loaded mile",
+  "target_column": "target_bid_rpm",
+  "statistic": "Unweighted median of per-shipment training target_bid_rpm; for even counts, mean of the two middle sorted values",
+  "source_sha256": "c0fcd88d358007fdeebadbb1e01dea069696ba9aec9eac4dcca6f57489f31a4c",
+  "training_date_range": {
+    "min": "2025-05-08 22:01:47",
+    "max": "2026-05-15 15:37:47"
+  },
+  "dataset_manifest_sha256": "6edac13f05868882e8d253735e6dd81d2fd509ac267a15fdcd785ed2e75766e2",
+  "training_files_sha256": {
+    "train/targets.csv": "d5f4cf01e03599137d5461c574e7f4b5bff04a738af58cb8b7ac02c53db12043",
+    "train/metadata.csv": "c92bea28d9354d7f45a34c5d382ea4cb75ab238ca073574191782da7f6e7c643"
+  },
+  "validation_test_policy": "No validation/test files read, no held-out metrics calculated",
+  "interpretation": "Historical submitted-bid reference; not profit or acceptance probability"
+}

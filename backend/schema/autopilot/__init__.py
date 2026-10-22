@@ -1,0 +1,1 @@
+"""Autopilot domain schema package."""

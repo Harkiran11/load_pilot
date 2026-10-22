@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "model_version": "freight-rpm-v1",
+  "files_sha256": {
+    "baselines/fallback-policy-v1.json": "7bf289c1b29b03622bd5399c7961e53fd422b31351a1c8d3c7ba7c665a2a2b03",
+    "baselines/global-median-v1.json": "e2248a6c696531f0b0939abc19c7ed432f9ce91566011513b1b5f8007d789edf",
+    "baselines/lane-median-v1.json": "4aa5a42fd4a6b7ba1b8fbd5c19eb67edf0d4c25f09ddb0343e7ff9f8ab5a3749",
+    "baselines/market-rpm-v1.json": "b6bec881c7cb8e48224ce6d529a9b6157ae2139682985d7ce439bd08e6025256",
+    "evaluation/comparison.json": "8151b9a7c83cf25069c482de07f232a76fdb33727ddfeac62750544faf43aa69",
+    "evaluation/final-test-plan.json": "8fb62a2832db164019217a7bccc1cf75eea5dd4a779ebf6f0c98359952174384",
+    "evaluation/overall.csv": "abbe5bef8425e487c735208c75cfcafa9c068570b2140b19e3e78a55b69c7701",
+    "evaluation/slices.csv": "94daa3dc759085fce0227ce25389105bd4631602f61899d6d31146b77f13b702",
+    "evaluation/test-results.json": "f27aaa257fdd1b3b640a2ba8396fa34e864240cc2184d117159e0838fb13d15d",
+    "metadata.json": "7d4e78ed9da598e13baefaba6c49dcb13036ab1fee982ec9b943ec74e2ffb507",
+    "model-config.json": "cf39f507eeaf84ec785be80712eff71f0bba89018f11301569f9f2c2ead657ba",
+    "preprocessing/categorical-mappings.json": "5a5d2121ff01de78598c190bfe962e85523fa4b39cdc6574a4650d6d113245a0",
+    "preprocessing/feature-schema.json": "7e041c0f2e25c56d4748db0d9b2178ed43c069cb8df380fc950388b188315635",
+    "preprocessing/manifest.json": "81b29104d64e8d2139a4ae2ef444dbaaae523c716781b3482d3eea618892c856",
+    "preprocessing/missing-value-policy.json": "1cbd6c904d111743590b4e45ffd6fb75cea5776a5e6106e411c2830c7ebc1678",
+    "preprocessing/numeric-scaler.json": "5e34c399a6f19628b1040e5fd24582c5b5848a5d610611ec7e57713dcc7d39e5",
+    "preprocessing/preprocessor.pkl": "265f221ed077db7a4987dc107dc377f21775bb906b0323b7dac912086e6a6fed",
+    "pyproject.toml": "6f4ee04875254fa4b5a9e4e948876e441d4ce8353668130b8e21a54fe803432c",
+    "selected-checkpoint.pt": "417fbbde158338af51b1d15e579b0a283130f8b253d150f28ac9cb81c0c27498",
+    "training/history.csv": "1dff4b6c219c60c3074275f508c42a83e20d77591cb1a96516db2ed3039d1b98",
+    "training/run-plan.json": "5d1db8ecd0e1cc3e116d2541986406d5abe154ab6c2ce3353f4a0babdfef30d5",
+    "training/tuning-results.json": "6d2055a827964beffb3a810a7ea0dec817590afa0031e03cb8775a6d97339197",
+    "uv.lock": "d1a928bf76a83a3753084fa2d7ce9b0b53a3cc831f0540cbb6d03adfc64e1515"
+  },
+  "runtime_versions": {
+    "python": "3.13",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1",
+    "torch": "2.14.1"
+  },
+  "model_code_sha256": "1fb585adf4a4a915a010bb63ebf0db62dab716e5d14a3a4119828f962924c5a0",
+  "bundle_id": "aeb5e2be110b7cb3d3acd108ec6a2884b52b2f1597775ed198e9d7f8a75ae69d"
+}

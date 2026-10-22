@@ -1,0 +1,33 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.uv-cache/
+*.egg-info/
+
+# Frontend
+node_modules/
+dist/
+
+# Databases (the demo seed is tracked)
+*.db-journal
+*.db-wal
+*.db-shm
+backend/data/dispatcher.db
+backend/data/dispatcher.db-*
+
+# Tools and OS
+.idea/
+.vscode/
+.DS_Store
+
+# Model training output
+model/data/
+model/artifacts/**/checkpoints/

@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-10-16T01:57:11.799063+00:00",
+  "checkpoint_sha256": "417fbbde158338af51b1d15e579b0a283130f8b253d150f28ac9cb81c0c27498",
+  "tuning_results_sha256": "6d2055a827964beffb3a810a7ea0dec817590afa0031e03cb8775a6d97339197",
+  "baseline_policy_sha256": "7bf289c1b29b03622bd5399c7961e53fd422b31351a1c8d3c7ba7c665a2a2b03",
+  "source_sha256": "c0fcd88d358007fdeebadbb1e01dea069696ba9aec9eac4dcca6f57489f31a4c",
+  "split_manifest_sha256": "6edac13f05868882e8d253735e6dd81d2fd509ac267a15fdcd785ed2e75766e2",
+  "preprocessor_sha256": "265f221ed077db7a4987dc107dc377f21775bb906b0323b7dac912086e6a6fed",
+  "selected_candidate": "candidate-01",
+  "selected_epoch": 47,
+  "partition": "test",
+  "batch_size": 64,
+  "device": "cpu",
+  "threads": 1,
+  "gates": {
+    "minimum_coverage": 1.0,
+    "maximum_mae_rpm": 0.2893136035067892,
+    "maximum_mae_dollars": 344.0411893400395,
+    "minimum_improvement_vs_test_baseline_percent": 5.0,
+    "maximum_slice_regression_percent": 10.0,
+    "minimum_slice_samples": 10,
+    "slice_dimensions": [
+      "lane",
+      "distance_band",
+      "season",
+      "weight_band"
+    ],
+    "sparse_slice_policy": "Report sparse/unseen slices as unverified; no release claim",
+    "zero_baseline_error_policy": "Require zero model error; percentage undefined",
+    "rationale": "Provisional engineering gates: 5% useful improvement, full coverage, no >10% regression in sufficiently populated slices; absolute ceilings use validation baseline only"
+  },
+  "policy": "One forward-only pass; no refitting, retuning, or live promotion. Marker retained on failure; inspect failure before any explicit recovery.",
+  "versions": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "missing_tokens_case_insensitive": [
+    "",
+    "na",
+    "n/a",
+    "null",
+    "none",
+    "nan"
+  ],
+  "none_and_absent": "Missing",
+  "required_features": "Reject; no imputation or dropped rows",
+  "optional_source_fields": "Ignored by projection; blanks retain otherwise valid rows",
+  "fully_missing_export_helpers": [
+    "fuel_surcharge_rpm",
+    "booked_lead_hours"
+  ],
+  "unknown_categories": "All-zero one-hot block for that feature; never refit or add columns",
+  "unknown_is_missing": false,
+  "target_at_inference": "Not required or read"
+}

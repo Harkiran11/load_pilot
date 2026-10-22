@@ -1,0 +1,1439 @@
+{
+  "schema_version": 1,
+  "policy_version": "historical-range-v1",
+  "minimum_samples": 20,
+  "quantiles": [
+    0.25,
+    0.75
+  ],
+  "quantile_method": "linear",
+  "distance_cuts": [
+    706.0,
+    824.25,
+    1361.6
+  ],
+  "global": {
+    "sample_count": 756,
+    "lower_rpm": 2.655012063766991,
+    "median_rpm": 2.9090003985451105,
+    "upper_rpm": 3.2786873146840443
+  },
+  "lanes": {
+    "ATL-CHI": {
+      "sample_count": 22,
+      "lower_rpm": 2.495790385775787,
+      "median_rpm": 2.6749032743554353,
+      "upper_rpm": 2.9987139613028475
+    },
+    "ATL-CMH": {
+      "sample_count": 3,
+      "lower_rpm": 2.614418017323204,
+      "median_rpm": 2.7559899469421945,
+      "upper_rpm": 2.8132343351732247
+    },
+    "ATL-DEN": {
+      "sample_count": 5,
+      "lower_rpm": 2.608702985326362,
+      "median_rpm": 2.904400200769617,
+      "upper_rpm": 2.975045902186613
+    },
+    "ATL-DFW": {
+      "sample_count": 23,
+      "lower_rpm": 2.3942029262513995,
+      "median_rpm": 2.634005002779322,
+      "upper_rpm": 2.737812673385255
+    },
+    "ATL-EWR": {
+      "sample_count": 24,
+      "lower_rpm": 2.5369597543509688,
+      "median_rpm": 2.6966244998063766,
+      "upper_rpm": 2.969326690715889
+    },
+    "ATL-JAX": {
+      "sample_count": 5,
+      "lower_rpm": 2.470170068027211,
+      "median_rpm": 2.831989924433249,
+      "upper_rpm": 3.0602215508559922
+    },
+    "ATL-LAX": {
+      "sample_count": 4,
+      "lower_rpm": 1.974499984024101,
+      "median_rpm": 2.096880640618356,
+      "upper_rpm": 2.299726100010504
+    },
+    "ATL-PHL": {
+      "sample_count": 22,
+      "lower_rpm": 2.573520745737068,
+      "median_rpm": 2.7228992423077623,
+      "upper_rpm": 2.7753182342672735
+    },
+    "ATL-SEA": {
+      "sample_count": 3,
+      "lower_rpm": 2.3037239546065256,
+      "median_rpm": 2.480397831679529,
+      "upper_rpm": 2.4850738568496746
+    },
+    "CHI-ATL": {
+      "sample_count": 19,
+      "lower_rpm": 2.7946853665616063,
+      "median_rpm": 2.9992080168094386,
+      "upper_rpm": 3.2254245886492114
+    },
+    "CHI-CMH": {
+      "sample_count": 3,
+      "lower_rpm": 3.0063017077436447,
+      "median_rpm": 3.137616580310881,
+      "upper_rpm": 3.1498018472934537
+    },
+    "CHI-DEN": {
+      "sample_count": 24,
+      "lower_rpm": 2.6297489725704617,
+      "median_rpm": 2.7730028992639704,
+      "upper_rpm": 2.9624339525155
+    },
+    "CHI-DFW": {
+      "sample_count": 1,
+      "lower_rpm": 2.8139939485627834,
+      "median_rpm": 2.8139939485627834,
+      "upper_rpm": 2.8139939485627834
+    },
+    "CHI-EWR": {
+      "sample_count": 16,
+      "lower_rpm": 2.5830483822600208,
+      "median_rpm": 2.739002961018035,
+      "upper_rpm": 2.9297796937398726
+    },
+    "CHI-JAX": {
+      "sample_count": 3,
+      "lower_rpm": 2.6619002507849228,
+      "median_rpm": 2.692302805717311,
+      "upper_rpm": 2.9001091102771905
+    },
+    "CHI-LAX": {
+      "sample_count": 6,
+      "lower_rpm": 2.4299507982833637,
+      "median_rpm": 2.7290004571951076,
+      "upper_rpm": 3.0166484464902186
+    },
+    "CHI-PHL": {
+      "sample_count": 2,
+      "lower_rpm": 3.1639732508852005,
+      "median_rpm": 3.235932164852839,
+      "upper_rpm": 3.307891078820477
+    },
+    "CHI-SEA": {
+      "sample_count": 4,
+      "lower_rpm": 2.2836017186941415,
+      "median_rpm": 2.41306116201057,
+      "upper_rpm": 2.518549784563944
+    },
+    "CMH-ATL": {
+      "sample_count": 1,
+      "lower_rpm": 2.779006518318724,
+      "median_rpm": 2.779006518318724,
+      "upper_rpm": 2.779006518318724
+    },
+    "CMH-CHI": {
+      "sample_count": 4,
+      "lower_rpm": 2.789615120274914,
+      "median_rpm": 2.895535749265426,
+      "upper_rpm": 3.1157414956760636
+    },
+    "CMH-DEN": {
+      "sample_count": 4,
+      "lower_rpm": 2.7195010203501635,
+      "median_rpm": 2.833002783645611,
+      "upper_rpm": 3.0568639972730485
+    },
+    "CMH-DFW": {
+      "sample_count": 3,
+      "lower_rpm": 2.6601746295405375,
+      "median_rpm": 2.7239957492029756,
+      "upper_rpm": 2.7990001285458908
+    },
+    "CMH-EWR": {
+      "sample_count": 24,
+      "lower_rpm": 2.7624761455791447,
+      "median_rpm": 3.040497533533329,
+      "upper_rpm": 3.252776066916243
+    },
+    "CMH-JAX": {
+      "sample_count": 2,
+      "lower_rpm": 2.764787144710679,
+      "median_rpm": 2.8325259358170873,
+      "upper_rpm": 2.9002647269234956
+    },
+    "CMH-LAX": {
+      "sample_count": 4,
+      "lower_rpm": 2.136200739696158,
+      "median_rpm": 2.22627111675334,
+      "upper_rpm": 2.4108963924348545
+    },
+    "CMH-PHL": {
+      "sample_count": 7,
+      "lower_rpm": 2.854444391396199,
+      "median_rpm": 2.9075656853434633,
+      "upper_rpm": 2.9255662586438183
+    },
+    "CMH-SEA": {
+      "sample_count": 5,
+      "lower_rpm": 2.238999950147066,
+      "median_rpm": 2.3341492127336045,
+      "upper_rpm": 2.3598021798626787
+    },
+    "DEN-ATL": {
+      "sample_count": 3,
+      "lower_rpm": 2.4899504580921614,
+      "median_rpm": 2.491852633287349,
+      "upper_rpm": 2.622927280963829
+    },
+    "DEN-CHI": {
+      "sample_count": 22,
+      "lower_rpm": 2.7055998994155694,
+      "median_rpm": 2.859502554963832,
+      "upper_rpm": 2.9780617691701705
+    },
+    "DEN-DFW": {
+      "sample_count": 7,
+      "lower_rpm": 2.6471753207738953,
+      "median_rpm": 2.7880026922429755,
+      "upper_rpm": 2.9118158183149068
+    },
+    "DEN-EWR": {
+      "sample_count": 4,
+      "lower_rpm": 2.358618410861692,
+      "median_rpm": 2.649599478276204,
+      "upper_rpm": 2.9886520369211826
+    },
+    "DEN-JAX": {
+      "sample_count": 3,
+      "lower_rpm": 2.402860373335446,
+      "median_rpm": 2.5890031045188,
+      "upper_rpm": 2.998877912194825
+    },
+    "DEN-LAX": {
+      "sample_count": 16,
+      "lower_rpm": 2.58599556257015,
+      "median_rpm": 2.745498501917046,
+      "upper_rpm": 2.8762125398801466
+    },
+    "DEN-PHL": {
+      "sample_count": 5,
+      "lower_rpm": 2.8219983098225314,
+      "median_rpm": 2.9419975545401886,
+      "upper_rpm": 2.9520981942034576
+    },
+    "DEN-SEA": {
+      "sample_count": 2,
+      "lower_rpm": 2.920035440493935,
+      "median_rpm": 2.9271907564419437,
+      "upper_rpm": 2.9343460723899524
+    },
+    "DFW-ATL": {
+      "sample_count": 20,
+      "lower_rpm": 2.5511654197399665,
+      "median_rpm": 2.7597096481789043,
+      "upper_rpm": 2.955235045755646
+    },
+    "DFW-CHI": {
+      "sample_count": 18,
+      "lower_rpm": 2.7110003965647005,
+      "median_rpm": 2.8078974520353266,
+      "upper_rpm": 2.8795028789381805
+    },
+    "DFW-CMH": {
+      "sample_count": 3,
+      "lower_rpm": 2.535345418372393,
+      "median_rpm": 2.6489350200021624,
+      "upper_rpm": 2.6564681557178265
+    },
+    "DFW-DEN": {
+      "sample_count": 3,
+      "lower_rpm": 2.5468247514629354,
+      "median_rpm": 2.674002772216233,
+      "upper_rpm": 2.7244975855608375
+    },
+    "DFW-EWR": {
+      "sample_count": 5,
+      "lower_rpm": 2.3372805483667904,
+      "median_rpm": 2.622003525264395,
+      "upper_rpm": 2.7989973844812552
+    },
+    "DFW-JAX": {
+      "sample_count": 1,
+      "lower_rpm": 2.778259027851319,
+      "median_rpm": 2.778259027851319,
+      "upper_rpm": 2.778259027851319
+    },
+    "DFW-LAX": {
+      "sample_count": 20,
+      "lower_rpm": 2.3677505148318083,
+      "median_rpm": 2.448499188706103,
+      "upper_rpm": 2.6177551468804197
+    },
+    "DFW-PHL": {
+      "sample_count": 6,
+      "lower_rpm": 2.667363621486796,
+      "median_rpm": 2.8651928382944454,
+      "upper_rpm": 3.043309988990811
+    },
+    "DFW-SEA": {
+      "sample_count": 4,
+      "lower_rpm": 2.3686890608690776,
+      "median_rpm": 2.4621095857562496,
+      "upper_rpm": 2.5618370752427184
+    },
+    "EWR-ATL": {
+      "sample_count": 27,
+      "lower_rpm": 2.8538535292161975,
+      "median_rpm": 3.027357470953796,
+      "upper_rpm": 3.294479011389603
+    },
+    "EWR-CHI": {
+      "sample_count": 23,
+      "lower_rpm": 2.948504791706905,
+      "median_rpm": 3.037995097406786,
+      "upper_rpm": 3.2516302959832983
+    },
+    "EWR-CMH": {
+      "sample_count": 5,
+      "lower_rpm": 3.1471452213487794,
+      "median_rpm": 3.441810805039504,
+      "upper_rpm": 3.780046511627907
+    },
+    "EWR-DEN": {
+      "sample_count": 4,
+      "lower_rpm": 2.9569109207866644,
+      "median_rpm": 3.0621987876978864,
+      "upper_rpm": 3.228999879068022
+    },
+    "EWR-DFW": {
+      "sample_count": 3,
+      "lower_rpm": 3.028693084819312,
+      "median_rpm": 3.043803403198715,
+      "upper_rpm": 3.1442324491310925
+    },
+    "EWR-JAX": {
+      "sample_count": 3,
+      "lower_rpm": 2.987651711161457,
+      "median_rpm": 2.9962976955043445,
+      "upper_rpm": 3.0929187732983703
+    },
+    "EWR-LAX": {
+      "sample_count": 1,
+      "lower_rpm": 2.6790012247639368,
+      "median_rpm": 2.6790012247639368,
+      "upper_rpm": 2.6790012247639368
+    },
+    "EWR-PHL": {
+      "sample_count": 1,
+      "lower_rpm": 3.783186951066499,
+      "median_rpm": 3.783186951066499,
+      "upper_rpm": 3.783186951066499
+    },
+    "EWR-SEA": {
+      "sample_count": 3,
+      "lower_rpm": 2.644553997585881,
+      "median_rpm": 2.8789580428444674,
+      "upper_rpm": 2.9436788226150767
+    },
+    "JAX-CHI": {
+      "sample_count": 3,
+      "lower_rpm": 2.457498341730502,
+      "median_rpm": 2.5269957622265493,
+      "upper_rpm": 2.587999759742445
+    },
+    "JAX-CMH": {
+      "sample_count": 6,
+      "lower_rpm": 2.599000653986362,
+      "median_rpm": 2.7202312019387858,
+      "upper_rpm": 2.8233086025732965
+    },
+    "JAX-DEN": {
+      "sample_count": 1,
+      "lower_rpm": 2.5004028403659704,
+      "median_rpm": 2.5004028403659704,
+      "upper_rpm": 2.5004028403659704
+    },
+    "JAX-DFW": {
+      "sample_count": 7,
+      "lower_rpm": 2.438450908123889,
+      "median_rpm": 2.6780014757035944,
+      "upper_rpm": 2.832317268571871
+    },
+    "JAX-EWR": {
+      "sample_count": 27,
+      "lower_rpm": 2.6666470906978366,
+      "median_rpm": 2.8320057068125073,
+      "upper_rpm": 3.001063628384879
+    },
+    "JAX-LAX": {
+      "sample_count": 5,
+      "lower_rpm": 2.332002041005659,
+      "median_rpm": 2.3630017946538207,
+      "upper_rpm": 2.6185520149953136
+    },
+    "JAX-PHL": {
+      "sample_count": 39,
+      "lower_rpm": 2.6481243564789265,
+      "median_rpm": 2.868,
+      "upper_rpm": 2.9245410873388993
+    },
+    "JAX-SEA": {
+      "sample_count": 6,
+      "lower_rpm": 2.125250905618543,
+      "median_rpm": 2.1740011515844047,
+      "upper_rpm": 2.4975494815759784
+    },
+    "LAX-ATL": {
+      "sample_count": 27,
+      "lower_rpm": 3.3914997908606086,
+      "median_rpm": 3.6080014501009887,
+      "upper_rpm": 3.8174245000781504
+    },
+    "LAX-CHI": {
+      "sample_count": 13,
+      "lower_rpm": 3.38536179321006,
+      "median_rpm": 3.459900790217454,
+      "upper_rpm": 3.7322597137014317
+    },
+    "LAX-CMH": {
+      "sample_count": 2,
+      "lower_rpm": 3.14525,
+      "median_rpm": 3.1654999999999998,
+      "upper_rpm": 3.18575
+    },
+    "LAX-DEN": {
+      "sample_count": 3,
+      "lower_rpm": 3.322926631079733,
+      "median_rpm": 3.7616556447803497,
+      "upper_rpm": 3.9045792741904073
+    },
+    "LAX-DFW": {
+      "sample_count": 22,
+      "lower_rpm": 3.3083717626536426,
+      "median_rpm": 3.608969288330715,
+      "upper_rpm": 3.742060034124878
+    },
+    "LAX-EWR": {
+      "sample_count": 21,
+      "lower_rpm": 3.453001841620626,
+      "median_rpm": 3.6019984406417986,
+      "upper_rpm": 3.729078534458166
+    },
+    "LAX-JAX": {
+      "sample_count": 2,
+      "lower_rpm": 3.530500311495801,
+      "median_rpm": 3.7220004366330484,
+      "upper_rpm": 3.9135005617702956
+    },
+    "LAX-PHL": {
+      "sample_count": 1,
+      "lower_rpm": 3.296998162992652,
+      "median_rpm": 3.296998162992652,
+      "upper_rpm": 3.296998162992652
+    },
+    "LAX-SEA": {
+      "sample_count": 3,
+      "lower_rpm": 3.1557623321079435,
+      "median_rpm": 3.404000367006147,
+      "upper_rpm": 3.748251643628379
+    },
+    "PHL-ATL": {
+      "sample_count": 20,
+      "lower_rpm": 3.09425033485729,
+      "median_rpm": 3.2813722849571954,
+      "upper_rpm": 3.477029611968293
+    },
+    "PHL-CHI": {
+      "sample_count": 4,
+      "lower_rpm": 2.9156033380442423,
+      "median_rpm": 3.0808907483852987,
+      "upper_rpm": 3.135803292930448
+    },
+    "PHL-CMH": {
+      "sample_count": 5,
+      "lower_rpm": 3.4195492289442466,
+      "median_rpm": 3.4545428652805468,
+      "upper_rpm": 4.043761904761905
+    },
+    "PHL-DEN": {
+      "sample_count": 7,
+      "lower_rpm": 2.793827046264583,
+      "median_rpm": 3.037003098424418,
+      "upper_rpm": 3.0697108813011957
+    },
+    "PHL-DFW": {
+      "sample_count": 4,
+      "lower_rpm": 3.020599510722374,
+      "median_rpm": 3.0759981190626933,
+      "upper_rpm": 3.1015882503662366
+    },
+    "PHL-EWR": {
+      "sample_count": 2,
+      "lower_rpm": 3.435007066492451,
+      "median_rpm": 3.685008496006322,
+      "upper_rpm": 3.935009925520194
+    },
+    "PHL-JAX": {
+      "sample_count": 1,
+      "lower_rpm": 2.9877559003781458,
+      "median_rpm": 2.9877559003781458,
+      "upper_rpm": 2.9877559003781458
+    },
+    "PHL-LAX": {
+      "sample_count": 7,
+      "lower_rpm": 2.4552740936925943,
+      "median_rpm": 2.652999589659417,
+      "upper_rpm": 3.0381247752077423
+    },
+    "PHL-SEA": {
+      "sample_count": 4,
+      "lower_rpm": 2.3930446406536525,
+      "median_rpm": 2.4797798865580765,
+      "upper_rpm": 2.5770622200836177
+    },
+    "SEA-ATL": {
+      "sample_count": 1,
+      "lower_rpm": 3.5170022164758037,
+      "median_rpm": 3.5170022164758037,
+      "upper_rpm": 3.5170022164758037
+    },
+    "SEA-CHI": {
+      "sample_count": 20,
+      "lower_rpm": 3.5042091099254105,
+      "median_rpm": 3.581740770394246,
+      "upper_rpm": 4.041066962465249
+    },
+    "SEA-CMH": {
+      "sample_count": 4,
+      "lower_rpm": 3.3737483324980118,
+      "median_rpm": 3.505568417679827,
+      "upper_rpm": 3.7852916223030526
+    },
+    "SEA-DEN": {
+      "sample_count": 19,
+      "lower_rpm": 2.9306002119018815,
+      "median_rpm": 3.1821238938053096,
+      "upper_rpm": 3.5276286512631376
+    },
+    "SEA-DFW": {
+      "sample_count": 2,
+      "lower_rpm": 3.1822992004465434,
+      "median_rpm": 3.237958507988134,
+      "upper_rpm": 3.293617815529725
+    },
+    "SEA-EWR": {
+      "sample_count": 2,
+      "lower_rpm": 3.500437981463693,
+      "median_rpm": 3.624875111138629,
+      "upper_rpm": 3.749312240813565
+    },
+    "SEA-JAX": {
+      "sample_count": 3,
+      "lower_rpm": 3.49298032107753,
+      "median_rpm": 3.915641891891892,
+      "upper_rpm": 3.9622718854031485
+    },
+    "SEA-LAX": {
+      "sample_count": 4,
+      "lower_rpm": 3.098420352968141,
+      "median_rpm": 3.1600578144853877,
+      "upper_rpm": 3.3484627530812165
+    },
+    "SEA-PHL": {
+      "sample_count": 4,
+      "lower_rpm": 3.464437931885489,
+      "median_rpm": 3.6164490292279954,
+      "upper_rpm": 3.780761318923576
+    }
+  },
+  "distance_bands": {
+    "[0.0, 706.0)": {
+      "sample_count": 189,
+      "lower_rpm": 2.6890005022601713,
+      "median_rpm": 2.9100079936051158,
+      "upper_rpm": 3.1912445379511247
+    },
+    "[1361.6, infinity)": {
+      "sample_count": 190,
+      "lower_rpm": 2.634925975443602,
+      "median_rpm": 3.2089759938707756,
+      "upper_rpm": 3.6017044632576516
+    },
+    "[706.0, 824.25)": {
+      "sample_count": 189,
+      "lower_rpm": 2.649003239471717,
+      "median_rpm": 2.8278489458233254,
+      "upper_rpm": 3.0528043422072892
+    },
+    "[824.25, 1361.6)": {
+      "sample_count": 188,
+      "lower_rpm": 2.6387497141550424,
+      "median_rpm": 2.8730045781745015,
+      "upper_rpm": 3.1361109717153286
+    }
+  },
+  "lane_distance_bands": {
+    "ATL-CHI": {
+      "[0.0, 706.0)": {
+        "sample_count": 22,
+        "lower_rpm": 2.495790385775787,
+        "median_rpm": 2.6749032743554353,
+        "upper_rpm": 2.9987139613028475
+      }
+    },
+    "ATL-CMH": {
+      "[0.0, 706.0)": {
+        "sample_count": 3,
+        "lower_rpm": 2.614418017323204,
+        "median_rpm": 2.7559899469421945,
+        "upper_rpm": 2.8132343351732247
+      }
+    },
+    "ATL-DEN": {
+      "[824.25, 1361.6)": {
+        "sample_count": 5,
+        "lower_rpm": 2.608702985326362,
+        "median_rpm": 2.904400200769617,
+        "upper_rpm": 2.975045902186613
+      }
+    },
+    "ATL-DFW": {
+      "[0.0, 706.0)": {
+        "sample_count": 8,
+        "lower_rpm": 2.3981008795248826,
+        "median_rpm": 2.584495800123941,
+        "upper_rpm": 2.673796233900133
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 15,
+        "lower_rpm": 2.3995944109565244,
+        "median_rpm": 2.7019942630788143,
+        "upper_rpm": 2.8044977531060002
+      }
+    },
+    "ATL-EWR": {
+      "[0.0, 706.0)": {
+        "sample_count": 3,
+        "lower_rpm": 3.0117730524192465,
+        "median_rpm": 3.3074974373993267,
+        "upper_rpm": 3.3557504593437013
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 20,
+        "lower_rpm": 2.464025849511991,
+        "median_rpm": 2.679446626438766,
+        "upper_rpm": 2.8501075572721155
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 1,
+        "lower_rpm": 3.162494199535963,
+        "median_rpm": 3.162494199535963,
+        "upper_rpm": 3.162494199535963
+      }
+    },
+    "ATL-JAX": {
+      "[0.0, 706.0)": {
+        "sample_count": 5,
+        "lower_rpm": 2.470170068027211,
+        "median_rpm": 2.831989924433249,
+        "upper_rpm": 3.0602215508559922
+      }
+    },
+    "ATL-LAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 1.974499984024101,
+        "median_rpm": 2.096880640618356,
+        "upper_rpm": 2.299726100010504
+      }
+    },
+    "ATL-PHL": {
+      "[0.0, 706.0)": {
+        "sample_count": 21,
+        "lower_rpm": 2.572244836423941,
+        "median_rpm": 2.7208058832541746,
+        "upper_rpm": 2.7432747652226595
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 1,
+        "lower_rpm": 3.0865940567433103,
+        "median_rpm": 3.0865940567433103,
+        "upper_rpm": 3.0865940567433103
+      }
+    },
+    "ATL-SEA": {
+      "[1361.6, infinity)": {
+        "sample_count": 3,
+        "lower_rpm": 2.3037239546065256,
+        "median_rpm": 2.480397831679529,
+        "upper_rpm": 2.4850738568496746
+      }
+    },
+    "CHI-ATL": {
+      "[0.0, 706.0)": {
+        "sample_count": 19,
+        "lower_rpm": 2.7946853665616063,
+        "median_rpm": 2.9992080168094386,
+        "upper_rpm": 3.2254245886492114
+      }
+    },
+    "CHI-CMH": {
+      "[0.0, 706.0)": {
+        "sample_count": 3,
+        "lower_rpm": 3.0063017077436447,
+        "median_rpm": 3.137616580310881,
+        "upper_rpm": 3.1498018472934537
+      }
+    },
+    "CHI-DEN": {
+      "[824.25, 1361.6)": {
+        "sample_count": 24,
+        "lower_rpm": 2.6297489725704617,
+        "median_rpm": 2.7730028992639704,
+        "upper_rpm": 2.9624339525155
+      }
+    },
+    "CHI-DFW": {
+      "[706.0, 824.25)": {
+        "sample_count": 1,
+        "lower_rpm": 2.8139939485627834,
+        "median_rpm": 2.8139939485627834,
+        "upper_rpm": 2.8139939485627834
+      }
+    },
+    "CHI-EWR": {
+      "[0.0, 706.0)": {
+        "sample_count": 6,
+        "lower_rpm": 2.6251206383242103,
+        "median_rpm": 2.743976241591527,
+        "upper_rpm": 3.093297436667866
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 10,
+        "lower_rpm": 2.5431532666176646,
+        "median_rpm": 2.739002961018035,
+        "upper_rpm": 2.859002201013828
+      }
+    },
+    "CHI-JAX": {
+      "[824.25, 1361.6)": {
+        "sample_count": 3,
+        "lower_rpm": 2.6619002507849228,
+        "median_rpm": 2.692302805717311,
+        "upper_rpm": 2.9001091102771905
+      }
+    },
+    "CHI-LAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 6,
+        "lower_rpm": 2.4299507982833637,
+        "median_rpm": 2.7290004571951076,
+        "upper_rpm": 3.0166484464902186
+      }
+    },
+    "CHI-PHL": {
+      "[0.0, 706.0)": {
+        "sample_count": 2,
+        "lower_rpm": 3.1639732508852005,
+        "median_rpm": 3.235932164852839,
+        "upper_rpm": 3.307891078820477
+      }
+    },
+    "CHI-SEA": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 2.2836017186941415,
+        "median_rpm": 2.41306116201057,
+        "upper_rpm": 2.518549784563944
+      }
+    },
+    "CMH-ATL": {
+      "[0.0, 706.0)": {
+        "sample_count": 1,
+        "lower_rpm": 2.779006518318724,
+        "median_rpm": 2.779006518318724,
+        "upper_rpm": 2.779006518318724
+      }
+    },
+    "CMH-CHI": {
+      "[0.0, 706.0)": {
+        "sample_count": 4,
+        "lower_rpm": 2.789615120274914,
+        "median_rpm": 2.895535749265426,
+        "upper_rpm": 3.1157414956760636
+      }
+    },
+    "CMH-DEN": {
+      "[824.25, 1361.6)": {
+        "sample_count": 4,
+        "lower_rpm": 2.7195010203501635,
+        "median_rpm": 2.833002783645611,
+        "upper_rpm": 3.0568639972730485
+      }
+    },
+    "CMH-DFW": {
+      "[824.25, 1361.6)": {
+        "sample_count": 3,
+        "lower_rpm": 2.6601746295405375,
+        "median_rpm": 2.7239957492029756,
+        "upper_rpm": 2.7990001285458908
+      }
+    },
+    "CMH-EWR": {
+      "[0.0, 706.0)": {
+        "sample_count": 24,
+        "lower_rpm": 2.7624761455791447,
+        "median_rpm": 3.040497533533329,
+        "upper_rpm": 3.252776066916243
+      }
+    },
+    "CMH-JAX": {
+      "[0.0, 706.0)": {
+        "sample_count": 2,
+        "lower_rpm": 2.764787144710679,
+        "median_rpm": 2.8325259358170873,
+        "upper_rpm": 2.9002647269234956
+      }
+    },
+    "CMH-LAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 2.136200739696158,
+        "median_rpm": 2.22627111675334,
+        "upper_rpm": 2.4108963924348545
+      }
+    },
+    "CMH-PHL": {
+      "[0.0, 706.0)": {
+        "sample_count": 7,
+        "lower_rpm": 2.854444391396199,
+        "median_rpm": 2.9075656853434633,
+        "upper_rpm": 2.9255662586438183
+      }
+    },
+    "CMH-SEA": {
+      "[1361.6, infinity)": {
+        "sample_count": 5,
+        "lower_rpm": 2.238999950147066,
+        "median_rpm": 2.3341492127336045,
+        "upper_rpm": 2.3598021798626787
+      }
+    },
+    "DEN-ATL": {
+      "[824.25, 1361.6)": {
+        "sample_count": 3,
+        "lower_rpm": 2.4899504580921614,
+        "median_rpm": 2.491852633287349,
+        "upper_rpm": 2.622927280963829
+      }
+    },
+    "DEN-CHI": {
+      "[706.0, 824.25)": {
+        "sample_count": 4,
+        "lower_rpm": 2.6907370141930596,
+        "median_rpm": 3.0071730256450824,
+        "upper_rpm": 3.3168858802679546
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 18,
+        "lower_rpm": 2.7108424220143146,
+        "median_rpm": 2.859502554963832,
+        "upper_rpm": 2.9409358399391814
+      }
+    },
+    "DEN-DFW": {
+      "[0.0, 706.0)": {
+        "sample_count": 6,
+        "lower_rpm": 2.6217651564249826,
+        "median_rpm": 2.7429991708573485,
+        "upper_rpm": 2.8363436912741005
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 1,
+        "lower_rpm": 2.971174279012005,
+        "median_rpm": 2.971174279012005,
+        "upper_rpm": 2.971174279012005
+      }
+    },
+    "DEN-EWR": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 2.358618410861692,
+        "median_rpm": 2.649599478276204,
+        "upper_rpm": 2.9886520369211826
+      }
+    },
+    "DEN-JAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 3,
+        "lower_rpm": 2.402860373335446,
+        "median_rpm": 2.5890031045188,
+        "upper_rpm": 2.998877912194825
+      }
+    },
+    "DEN-LAX": {
+      "[706.0, 824.25)": {
+        "sample_count": 4,
+        "lower_rpm": 2.541957281857135,
+        "median_rpm": 2.6896456531350896,
+        "upper_rpm": 2.8297244322007895
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 12,
+        "lower_rpm": 2.6282490846817055,
+        "median_rpm": 2.745498501917046,
+        "upper_rpm": 2.8843807592682076
+      }
+    },
+    "DEN-PHL": {
+      "[1361.6, infinity)": {
+        "sample_count": 5,
+        "lower_rpm": 2.8219983098225314,
+        "median_rpm": 2.9419975545401886,
+        "upper_rpm": 2.9520981942034576
+      }
+    },
+    "DEN-SEA": {
+      "[824.25, 1361.6)": {
+        "sample_count": 2,
+        "lower_rpm": 2.920035440493935,
+        "median_rpm": 2.9271907564419437,
+        "upper_rpm": 2.9343460723899524
+      }
+    },
+    "DFW-ATL": {
+      "[0.0, 706.0)": {
+        "sample_count": 2,
+        "lower_rpm": 2.7580441552133834,
+        "median_rpm": 2.9824439871886446,
+        "upper_rpm": 3.2068438191639053
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 17,
+        "lower_rpm": 2.557005785240581,
+        "median_rpm": 2.796277450455276,
+        "upper_rpm": 2.9428551818805766
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 1,
+        "lower_rpm": 2.6529966034841674,
+        "median_rpm": 2.6529966034841674,
+        "upper_rpm": 2.6529966034841674
+      }
+    },
+    "DFW-CHI": {
+      "[706.0, 824.25)": {
+        "sample_count": 15,
+        "lower_rpm": 2.7299982978081285,
+        "median_rpm": 2.82,
+        "upper_rpm": 2.9637672156394794
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 3,
+        "lower_rpm": 2.7045017198665473,
+        "median_rpm": 2.776002637072849,
+        "upper_rpm": 2.783503616632288
+      }
+    },
+    "DFW-CMH": {
+      "[824.25, 1361.6)": {
+        "sample_count": 3,
+        "lower_rpm": 2.535345418372393,
+        "median_rpm": 2.6489350200021624,
+        "upper_rpm": 2.6564681557178265
+      }
+    },
+    "DFW-DEN": {
+      "[0.0, 706.0)": {
+        "sample_count": 3,
+        "lower_rpm": 2.5468247514629354,
+        "median_rpm": 2.674002772216233,
+        "upper_rpm": 2.7244975855608375
+      }
+    },
+    "DFW-EWR": {
+      "[1361.6, infinity)": {
+        "sample_count": 5,
+        "lower_rpm": 2.3372805483667904,
+        "median_rpm": 2.622003525264395,
+        "upper_rpm": 2.7989973844812552
+      }
+    },
+    "DFW-JAX": {
+      "[824.25, 1361.6)": {
+        "sample_count": 1,
+        "lower_rpm": 2.778259027851319,
+        "median_rpm": 2.778259027851319,
+        "upper_rpm": 2.778259027851319
+      }
+    },
+    "DFW-LAX": {
+      "[824.25, 1361.6)": {
+        "sample_count": 20,
+        "lower_rpm": 2.3677505148318083,
+        "median_rpm": 2.448499188706103,
+        "upper_rpm": 2.6177551468804197
+      }
+    },
+    "DFW-PHL": {
+      "[1361.6, infinity)": {
+        "sample_count": 1,
+        "lower_rpm": 3.093500293772033,
+        "median_rpm": 3.093500293772033,
+        "upper_rpm": 3.093500293772033
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 5,
+        "lower_rpm": 2.6106026280018124,
+        "median_rpm": 2.8376466019417474,
+        "upper_rpm": 2.8927390746471433
+      }
+    },
+    "DFW-SEA": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 2.3686890608690776,
+        "median_rpm": 2.4621095857562496,
+        "upper_rpm": 2.5618370752427184
+      }
+    },
+    "EWR-ATL": {
+      "[0.0, 706.0)": {
+        "sample_count": 2,
+        "lower_rpm": 2.9047147615537385,
+        "median_rpm": 2.9537235574219736,
+        "upper_rpm": 3.002732353290209
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 25,
+        "lower_rpm": 2.852001092746892,
+        "median_rpm": 3.027357470953796,
+        "upper_rpm": 3.3124951693932756
+      }
+    },
+    "EWR-CHI": {
+      "[0.0, 706.0)": {
+        "sample_count": 8,
+        "lower_rpm": 3.0055970693436875,
+        "median_rpm": 3.103720750393814,
+        "upper_rpm": 3.3571356004559947
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 15,
+        "lower_rpm": 2.9309202339744873,
+        "median_rpm": 3.0096002252252254,
+        "upper_rpm": 3.2283099819943573
+      }
+    },
+    "EWR-CMH": {
+      "[0.0, 706.0)": {
+        "sample_count": 5,
+        "lower_rpm": 3.1471452213487794,
+        "median_rpm": 3.441810805039504,
+        "upper_rpm": 3.780046511627907
+      }
+    },
+    "EWR-DEN": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 2.9569109207866644,
+        "median_rpm": 3.0621987876978864,
+        "upper_rpm": 3.228999879068022
+      }
+    },
+    "EWR-DFW": {
+      "[1361.6, infinity)": {
+        "sample_count": 2,
+        "lower_rpm": 3.094017926164904,
+        "median_rpm": 3.1442324491310925,
+        "upper_rpm": 3.194446972097281
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 1,
+        "lower_rpm": 3.0135827664399093,
+        "median_rpm": 3.0135827664399093,
+        "upper_rpm": 3.0135827664399093
+      }
+    },
+    "EWR-JAX": {
+      "[706.0, 824.25)": {
+        "sample_count": 3,
+        "lower_rpm": 2.987651711161457,
+        "median_rpm": 2.9962976955043445,
+        "upper_rpm": 3.0929187732983703
+      }
+    },
+    "EWR-LAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 1,
+        "lower_rpm": 2.6790012247639368,
+        "median_rpm": 2.6790012247639368,
+        "upper_rpm": 2.6790012247639368
+      }
+    },
+    "EWR-PHL": {
+      "[0.0, 706.0)": {
+        "sample_count": 1,
+        "lower_rpm": 3.783186951066499,
+        "median_rpm": 3.783186951066499,
+        "upper_rpm": 3.783186951066499
+      }
+    },
+    "EWR-SEA": {
+      "[1361.6, infinity)": {
+        "sample_count": 3,
+        "lower_rpm": 2.644553997585881,
+        "median_rpm": 2.8789580428444674,
+        "upper_rpm": 2.9436788226150767
+      }
+    },
+    "JAX-CHI": {
+      "[824.25, 1361.6)": {
+        "sample_count": 3,
+        "lower_rpm": 2.457498341730502,
+        "median_rpm": 2.5269957622265493,
+        "upper_rpm": 2.587999759742445
+      }
+    },
+    "JAX-CMH": {
+      "[0.0, 706.0)": {
+        "sample_count": 4,
+        "lower_rpm": 2.5312099670548007,
+        "median_rpm": 2.6922284261838807,
+        "upper_rpm": 2.807407925030333
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 2,
+        "lower_rpm": 2.7357269337777286,
+        "median_rpm": 2.830449049936737,
+        "upper_rpm": 2.925171166095746
+      }
+    },
+    "JAX-DEN": {
+      "[1361.6, infinity)": {
+        "sample_count": 1,
+        "lower_rpm": 2.5004028403659704,
+        "median_rpm": 2.5004028403659704,
+        "upper_rpm": 2.5004028403659704
+      }
+    },
+    "JAX-DFW": {
+      "[824.25, 1361.6)": {
+        "sample_count": 7,
+        "lower_rpm": 2.438450908123889,
+        "median_rpm": 2.6780014757035944,
+        "upper_rpm": 2.832317268571871
+      }
+    },
+    "JAX-EWR": {
+      "[706.0, 824.25)": {
+        "sample_count": 13,
+        "lower_rpm": 2.63149557956778,
+        "median_rpm": 2.7018038617886178,
+        "upper_rpm": 3.0348512669849432
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 14,
+        "lower_rpm": 2.7830030506928276,
+        "median_rpm": 2.838153238552228,
+        "upper_rpm": 2.9741313902638584
+      }
+    },
+    "JAX-LAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 5,
+        "lower_rpm": 2.332002041005659,
+        "median_rpm": 2.3630017946538207,
+        "upper_rpm": 2.6185520149953136
+      }
+    },
+    "JAX-PHL": {
+      "[0.0, 706.0)": {
+        "sample_count": 3,
+        "lower_rpm": 2.7239712042288837,
+        "median_rpm": 2.8059964465501928,
+        "upper_rpm": 2.8369982232750965
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 35,
+        "lower_rpm": 2.633153318350562,
+        "median_rpm": 2.869001610305958,
+        "upper_rpm": 2.9359189773202976
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 1,
+        "lower_rpm": 2.919245283018868,
+        "median_rpm": 2.919245283018868,
+        "upper_rpm": 2.919245283018868
+      }
+    },
+    "JAX-SEA": {
+      "[1361.6, infinity)": {
+        "sample_count": 6,
+        "lower_rpm": 2.125250905618543,
+        "median_rpm": 2.1740011515844047,
+        "upper_rpm": 2.4975494815759784
+      }
+    },
+    "LAX-ATL": {
+      "[1361.6, infinity)": {
+        "sample_count": 27,
+        "lower_rpm": 3.3914997908606086,
+        "median_rpm": 3.6080014501009887,
+        "upper_rpm": 3.8174245000781504
+      }
+    },
+    "LAX-CHI": {
+      "[1361.6, infinity)": {
+        "sample_count": 13,
+        "lower_rpm": 3.38536179321006,
+        "median_rpm": 3.459900790217454,
+        "upper_rpm": 3.7322597137014317
+      }
+    },
+    "LAX-CMH": {
+      "[1361.6, infinity)": {
+        "sample_count": 2,
+        "lower_rpm": 3.14525,
+        "median_rpm": 3.1654999999999998,
+        "upper_rpm": 3.18575
+      }
+    },
+    "LAX-DEN": {
+      "[706.0, 824.25)": {
+        "sample_count": 1,
+        "lower_rpm": 4.047502903600464,
+        "median_rpm": 4.047502903600464,
+        "upper_rpm": 4.047502903600464
+      },
+      "[824.25, 1361.6)": {
+        "sample_count": 2,
+        "lower_rpm": 3.103562124229425,
+        "median_rpm": 3.322926631079733,
+        "upper_rpm": 3.5422911379300412
+      }
+    },
+    "LAX-DFW": {
+      "[824.25, 1361.6)": {
+        "sample_count": 22,
+        "lower_rpm": 3.3083717626536426,
+        "median_rpm": 3.608969288330715,
+        "upper_rpm": 3.742060034124878
+      }
+    },
+    "LAX-EWR": {
+      "[1361.6, infinity)": {
+        "sample_count": 21,
+        "lower_rpm": 3.453001841620626,
+        "median_rpm": 3.6019984406417986,
+        "upper_rpm": 3.729078534458166
+      }
+    },
+    "LAX-JAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 2,
+        "lower_rpm": 3.530500311495801,
+        "median_rpm": 3.7220004366330484,
+        "upper_rpm": 3.9135005617702956
+      }
+    },
+    "LAX-PHL": {
+      "[1361.6, infinity)": {
+        "sample_count": 1,
+        "lower_rpm": 3.296998162992652,
+        "median_rpm": 3.296998162992652,
+        "upper_rpm": 3.296998162992652
+      }
+    },
+    "LAX-SEA": {
+      "[824.25, 1361.6)": {
+        "sample_count": 3,
+        "lower_rpm": 3.1557623321079435,
+        "median_rpm": 3.404000367006147,
+        "upper_rpm": 3.748251643628379
+      }
+    },
+    "PHL-ATL": {
+      "[0.0, 706.0)": {
+        "sample_count": 15,
+        "lower_rpm": 3.157003267719687,
+        "median_rpm": 3.34959556620731,
+        "upper_rpm": 3.5874302592433738
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 5,
+        "lower_rpm": 3.058996406570842,
+        "median_rpm": 3.1060016442861063,
+        "upper_rpm": 3.3085482062780267
+      }
+    },
+    "PHL-CHI": {
+      "[0.0, 706.0)": {
+        "sample_count": 3,
+        "lower_rpm": 3.0808907483852987,
+        "median_rpm": 3.1047367627093077,
+        "upper_rpm": 3.1668698231515884
+      },
+      "[706.0, 824.25)": {
+        "sample_count": 1,
+        "lower_rpm": 2.4912791499931006,
+        "median_rpm": 2.4912791499931006,
+        "upper_rpm": 2.4912791499931006
+      }
+    },
+    "PHL-CMH": {
+      "[0.0, 706.0)": {
+        "sample_count": 5,
+        "lower_rpm": 3.4195492289442466,
+        "median_rpm": 3.4545428652805468,
+        "upper_rpm": 4.043761904761905
+      }
+    },
+    "PHL-DEN": {
+      "[1361.6, infinity)": {
+        "sample_count": 7,
+        "lower_rpm": 2.793827046264583,
+        "median_rpm": 3.037003098424418,
+        "upper_rpm": 3.0697108813011957
+      }
+    },
+    "PHL-DFW": {
+      "[824.25, 1361.6)": {
+        "sample_count": 4,
+        "lower_rpm": 3.020599510722374,
+        "median_rpm": 3.0759981190626933,
+        "upper_rpm": 3.1015882503662366
+      }
+    },
+    "PHL-EWR": {
+      "[0.0, 706.0)": {
+        "sample_count": 2,
+        "lower_rpm": 3.435007066492451,
+        "median_rpm": 3.685008496006322,
+        "upper_rpm": 3.935009925520194
+      }
+    },
+    "PHL-JAX": {
+      "[706.0, 824.25)": {
+        "sample_count": 1,
+        "lower_rpm": 2.9877559003781458,
+        "median_rpm": 2.9877559003781458,
+        "upper_rpm": 2.9877559003781458
+      }
+    },
+    "PHL-LAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 7,
+        "lower_rpm": 2.4552740936925943,
+        "median_rpm": 2.652999589659417,
+        "upper_rpm": 3.0381247752077423
+      }
+    },
+    "PHL-SEA": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 2.3930446406536525,
+        "median_rpm": 2.4797798865580765,
+        "upper_rpm": 2.5770622200836177
+      }
+    },
+    "SEA-ATL": {
+      "[1361.6, infinity)": {
+        "sample_count": 1,
+        "lower_rpm": 3.5170022164758037,
+        "median_rpm": 3.5170022164758037,
+        "upper_rpm": 3.5170022164758037
+      }
+    },
+    "SEA-CHI": {
+      "[1361.6, infinity)": {
+        "sample_count": 20,
+        "lower_rpm": 3.5042091099254105,
+        "median_rpm": 3.581740770394246,
+        "upper_rpm": 4.041066962465249
+      }
+    },
+    "SEA-CMH": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 3.3737483324980118,
+        "median_rpm": 3.505568417679827,
+        "upper_rpm": 3.7852916223030526
+      }
+    },
+    "SEA-DEN": {
+      "[824.25, 1361.6)": {
+        "sample_count": 19,
+        "lower_rpm": 2.9306002119018815,
+        "median_rpm": 3.1821238938053096,
+        "upper_rpm": 3.5276286512631376
+      }
+    },
+    "SEA-DFW": {
+      "[1361.6, infinity)": {
+        "sample_count": 2,
+        "lower_rpm": 3.1822992004465434,
+        "median_rpm": 3.237958507988134,
+        "upper_rpm": 3.293617815529725
+      }
+    },
+    "SEA-EWR": {
+      "[1361.6, infinity)": {
+        "sample_count": 2,
+        "lower_rpm": 3.500437981463693,
+        "median_rpm": 3.624875111138629,
+        "upper_rpm": 3.749312240813565
+      }
+    },
+    "SEA-JAX": {
+      "[1361.6, infinity)": {
+        "sample_count": 3,
+        "lower_rpm": 3.49298032107753,
+        "median_rpm": 3.915641891891892,
+        "upper_rpm": 3.9622718854031485
+      }
+    },
+    "SEA-LAX": {
+      "[824.25, 1361.6)": {
+        "sample_count": 4,
+        "lower_rpm": 3.098420352968141,
+        "median_rpm": 3.1600578144853877,
+        "upper_rpm": 3.3484627530812165
+      }
+    },
+    "SEA-PHL": {
+      "[1361.6, infinity)": {
+        "sample_count": 4,
+        "lower_rpm": 3.464437931885489,
+        "median_rpm": 3.6164490292279954,
+        "upper_rpm": 3.780761318923576
+      }
+    }
+  },
+  "selection_order": [
+    "lane_distance_band",
+    "lane",
+    "distance_band",
+    "global"
+  ],
+  "interpretation": "Historical submitted-bid reference; no profit or acceptance guarantee",
+  "fit_partition": "train",
+  "training_row_count": 756,
+  "units": "USD per loaded mile",
+  "target_column": "target_bid_rpm",
+  "source_sha256": "c0fcd88d358007fdeebadbb1e01dea069696ba9aec9eac4dcca6f57489f31a4c",
+  "training_date_range": {
+    "min": "2025-05-08 22:01:47",
+    "max": "2026-05-15 15:37:47"
+  },
+  "dataset_manifest_sha256": "6edac13f05868882e8d253735e6dd81d2fd509ac267a15fdcd785ed2e75766e2",
+  "training_files_sha256": {
+    "train/targets.csv": "d5f4cf01e03599137d5461c574e7f4b5bff04a738af58cb8b7ac02c53db12043",
+    "train/metadata.csv": "c92bea28d9354d7f45a34c5d382ea4cb75ab238ca073574191782da7f6e7c643",
+    "train/features.csv": "70d1efe28f5197ded8f6c2f7e9fa1383bc7625c3fa04924179cbe413680a2943"
+  },
+  "validation_test_policy": "No validation/test files read, no held-out metrics calculated",
+  "artifact_id": "56c67fb5526d59bb0ecd27a393650a85bdb907b23ea1f9eabbd645d3e4e5879c"
+}

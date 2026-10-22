@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "policy_version": "baseline-fallback-v1",
+  "selected_baseline": "lane_median",
+  "baseline_id": "lane_median_bid_rpm",
+  "baseline_artifact": "lane-median-v1.json",
+  "baseline_sha256": "4aa5a42fd4a6b7ba1b8fbd5c19eb67edf0d4c25f09ddb0343e7ff9f8ab5a3749",
+  "selection_rule": "Select lane+global only with full validation coverage and no regression in either RPM or dollar MAE, with at least one strict improvement; otherwise global",
+  "selection_partition": "validation",
+  "fit_partition": "train",
+  "source_sha256": "c0fcd88d358007fdeebadbb1e01dea069696ba9aec9eac4dcca6f57489f31a4c",
+  "dataset_manifest_sha256": "6edac13f05868882e8d253735e6dd81d2fd509ac267a15fdcd785ed2e75766e2",
+  "metrics_sha256": "a69394cceab96178cd8c89f39d2c449529ccd140afdbaca07ae433e8708e00a6",
+  "validation_metrics": [
+    {
+      "baseline": "global_median",
+      "eligible_count": 162,
+      "prediction_count": 162,
+      "unavailable_count": 0,
+      "coverage": 1.0,
+      "status": "scored",
+      "sparse": false,
+      "minimum_slice_samples": 5,
+      "mae_rpm": 0.39987046031761186,
+      "mae_dollars": 527.3208751397383,
+      "mean_signed_error_rpm": -0.14734785970163042,
+      "mean_signed_error_dollars": -256.19911231434895
+    },
+    {
+      "baseline": "lane_median",
+      "eligible_count": 162,
+      "prediction_count": 162,
+      "unavailable_count": 0,
+      "coverage": 1.0,
+      "status": "scored",
+      "sparse": false,
+      "minimum_slice_samples": 5,
+      "mae_rpm": 0.30454063527030445,
+      "mae_dollars": 362.14862035793635,
+      "mean_signed_error_rpm": -0.11262479745389285,
+      "mean_signed_error_dollars": -146.8590484678709
+    },
+    {
+      "baseline": "market_rpm",
+      "eligible_count": 162,
+      "prediction_count": 0,
+      "unavailable_count": 162,
+      "coverage": 0.0,
+      "status": "unavailable",
+      "sparse": false,
+      "minimum_slice_samples": 5,
+      "mae_rpm": null,
+      "mae_dollars": null,
+      "mean_signed_error_rpm": null,
+      "mean_signed_error_dollars": null
+    }
+  ],
+  "min_lane_samples": 5,
+  "global_fallback_rpm": 2.9090003985451105,
+  "improvement_vs_global_percent": {
+    "mae_rpm": 23.840176884180988,
+    "mae_dollars": 31.322912209388985
+  },
+  "supported_triggers": [
+    "INVALID_MODEL_OUTPUT",
+    "MODEL_ERROR",
+    "MODEL_TIMEOUT",
+    "MODEL_UNAVAILABLE",
+    "MODEL_UNRELIABLE",
+    "UNSUPPORTED_MODEL_INPUT"
+  ],
+  "unreliable_policy": "Explicit upstream failed release/drift/support gate; no invented confidence score or request-time fitting",
+  "default_fallback_mode": "review",
+  "submission_enabled": false,
+  "invalid_fallback_policy": "REVIEW with no candidate if disabled, unsupported, or artifact/input integrity checks fail",
+  "limitations": [
+    "Historical submitted-price accuracy only; not profit or acceptance",
+    "Market reference unavailable; no independent pre-bid quote snapshots",
+    "Sparse lane slices and unobserved seasons limit generalization claims",
+    "No test evaluation, baseline refit, threshold tuning, or live submissions"
+  ]
+}

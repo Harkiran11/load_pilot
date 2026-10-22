@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "bundle_id": "2fc4319fd549ab6365bb4c2ff0b95cdbfb56cc2bc307ffed2992a81ac49890b5",
+  "files_sha256": {
+    "feature-schema.json": "7e041c0f2e25c56d4748db0d9b2178ed43c069cb8df380fc950388b188315635",
+    "categorical-mappings.json": "5a5d2121ff01de78598c190bfe962e85523fa4b39cdc6574a4650d6d113245a0",
+    "numeric-scaler.json": "5e34c399a6f19628b1040e5fd24582c5b5848a5d610611ec7e57713dcc7d39e5",
+    "missing-value-policy.json": "1cbd6c904d111743590b4e45ffd6fb75cea5776a5e6106e411c2830c7ebc1678",
+    "preprocessor.pkl": "265f221ed077db7a4987dc107dc377f21775bb906b0323b7dac912086e6a6fed"
+  },
+  "runtime_versions": {
+    "python": "3.13",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1"
+  },
+  "contract_code_sha256": {
+    "loadpilot_model/features/schema.py": "bfaa50aca9d87cd8620a15fbee5085c0bd8047a5edc30b8fc9e942b0ef28b806",
+    "loadpilot_model/features/preprocessing.py": "5b50d8fca023b8bdb4d2b026e17704a00be8a7f5a817d489d6ccf061c1878b45"
+  },
+  "purpose": "Preprocessing only; no trained PyTorch pricing weights yet"
+}

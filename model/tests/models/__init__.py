@@ -1,0 +1,1 @@
+"""Freight regressor architecture tests."""

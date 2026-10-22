@@ -1,0 +1,1 @@
+"""Dispatch domain schema package."""

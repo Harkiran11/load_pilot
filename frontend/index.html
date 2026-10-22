@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LoadPilot frontend built with React, Vite, Tailwind CSS, and daisyUI." />
+    <title>LoadPilot</title>
+    <script>
+      // Apply the saved preference before rendering to avoid a theme flash.
+      let savedTheme
+      try {
+        savedTheme = localStorage.getItem('loadpilot-theme')
+      } catch {
+        // Fall back to the system preference when storage is unavailable.
+      }
+      document.documentElement.dataset.theme =
+        savedTheme === 'light' || savedTheme === 'dark'
+          ? savedTheme
+          : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

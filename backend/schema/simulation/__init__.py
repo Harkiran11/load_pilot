@@ -1,0 +1,1 @@
+"""Simulation domain schema package."""

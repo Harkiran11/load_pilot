@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "baseline_id": "lane_median_bid_rpm",
+  "min_lane_samples": 5,
+  "threshold_policy": "Configured minimum training count; inclusive; never estimated from held-out data",
+  "lane_normalization": "Strip whitespace, uppercase, preserve origin-destination direction",
+  "statistic": "Unweighted median of training target_bid_rpm within each eligible lane",
+  "global_fallback": {
+    "baseline_id": "global_median_bid_rpm",
+    "median_bid_rpm": 2.9090003985451105,
+    "training_row_count": 756
+  },
+  "lanes": {
+    "ATL-CHI": {
+      "training_row_count": 22,
+      "median_bid_rpm": 2.6749032743554353
+    },
+    "ATL-CMH": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "ATL-DEN": {
+      "training_row_count": 5,
+      "median_bid_rpm": 2.904400200769617
+    },
+    "ATL-DFW": {
+      "training_row_count": 23,
+      "median_bid_rpm": 2.634005002779322
+    },
+    "ATL-EWR": {
+      "training_row_count": 24,
+      "median_bid_rpm": 2.6966244998063766
+    },
+    "ATL-JAX": {
+      "training_row_count": 5,
+      "median_bid_rpm": 2.831989924433249
+    },
+    "ATL-LAX": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "ATL-PHL": {
+      "training_row_count": 22,
+      "median_bid_rpm": 2.7228992423077623
+    },
+    "ATL-SEA": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "CHI-ATL": {
+      "training_row_count": 19,
+      "median_bid_rpm": 2.9992080168094386
+    },
+    "CHI-CMH": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "CHI-DEN": {
+      "training_row_count": 24,
+      "median_bid_rpm": 2.7730028992639704
+    },
+    "CHI-DFW": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "CHI-EWR": {
+      "training_row_count": 16,
+      "median_bid_rpm": 2.739002961018035
+    },
+    "CHI-JAX": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "CHI-LAX": {
+      "training_row_count": 6,
+      "median_bid_rpm": 2.7290004571951076
+    },
+    "CHI-PHL": {
+      "training_row_count": 2,
+      "median_bid_rpm": null
+    },
+    "CHI-SEA": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "CMH-ATL": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "CMH-CHI": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "CMH-DEN": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "CMH-DFW": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "CMH-EWR": {
+      "training_row_count": 24,
+      "median_bid_rpm": 3.040497533533329
+    },
+    "CMH-JAX": {
+      "training_row_count": 2,
+      "median_bid_rpm": null
+    },
+    "CMH-LAX": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "CMH-PHL": {
+      "training_row_count": 7,
+      "median_bid_rpm": 2.9075656853434633
+    },
+    "CMH-SEA": {
+      "training_row_count": 5,
+      "median_bid_rpm": 2.3341492127336045
+    },
+    "DEN-ATL": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "DEN-CHI": {
+      "training_row_count": 22,
+      "median_bid_rpm": 2.859502554963832
+    },
+    "DEN-DFW": {
+      "training_row_count": 7,
+      "median_bid_rpm": 2.7880026922429755
+    },
+    "DEN-EWR": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "DEN-JAX": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "DEN-LAX": {
+      "training_row_count": 16,
+      "median_bid_rpm": 2.745498501917046
+    },
+    "DEN-PHL": {
+      "training_row_count": 5,
+      "median_bid_rpm": 2.9419975545401886
+    },
+    "DEN-SEA": {
+      "training_row_count": 2,
+      "median_bid_rpm": null
+    },
+    "DFW-ATL": {
+      "training_row_count": 20,
+      "median_bid_rpm": 2.7597096481789043
+    },
+    "DFW-CHI": {
+      "training_row_count": 18,
+      "median_bid_rpm": 2.8078974520353266
+    },
+    "DFW-CMH": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "DFW-DEN": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "DFW-EWR": {
+      "training_row_count": 5,
+      "median_bid_rpm": 2.622003525264395
+    },
+    "DFW-JAX": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "DFW-LAX": {
+      "training_row_count": 20,
+      "median_bid_rpm": 2.448499188706103
+    },
+    "DFW-PHL": {
+      "training_row_count": 6,
+      "median_bid_rpm": 2.8651928382944454
+    },
+    "DFW-SEA": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "EWR-ATL": {
+      "training_row_count": 27,
+      "median_bid_rpm": 3.027357470953796
+    },
+    "EWR-CHI": {
+      "training_row_count": 23,
+      "median_bid_rpm": 3.037995097406786
+    },
+    "EWR-CMH": {
+      "training_row_count": 5,
+      "median_bid_rpm": 3.441810805039504
+    },
+    "EWR-DEN": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "EWR-DFW": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "EWR-JAX": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "EWR-LAX": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "EWR-PHL": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "EWR-SEA": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "JAX-CHI": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "JAX-CMH": {
+      "training_row_count": 6,
+      "median_bid_rpm": 2.7202312019387858
+    },
+    "JAX-DEN": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "JAX-DFW": {
+      "training_row_count": 7,
+      "median_bid_rpm": 2.6780014757035944
+    },
+    "JAX-EWR": {
+      "training_row_count": 27,
+      "median_bid_rpm": 2.8320057068125073
+    },
+    "JAX-LAX": {
+      "training_row_count": 5,
+      "median_bid_rpm": 2.3630017946538207
+    },
+    "JAX-PHL": {
+      "training_row_count": 39,
+      "median_bid_rpm": 2.868
+    },
+    "JAX-SEA": {
+      "training_row_count": 6,
+      "median_bid_rpm": 2.1740011515844047
+    },
+    "LAX-ATL": {
+      "training_row_count": 27,
+      "median_bid_rpm": 3.6080014501009887
+    },
+    "LAX-CHI": {
+      "training_row_count": 13,
+      "median_bid_rpm": 3.459900790217454
+    },
+    "LAX-CMH": {
+      "training_row_count": 2,
+      "median_bid_rpm": null
+    },
+    "LAX-DEN": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "LAX-DFW": {
+      "training_row_count": 22,
+      "median_bid_rpm": 3.608969288330715
+    },
+    "LAX-EWR": {
+      "training_row_count": 21,
+      "median_bid_rpm": 3.6019984406417986
+    },
+    "LAX-JAX": {
+      "training_row_count": 2,
+      "median_bid_rpm": null
+    },
+    "LAX-PHL": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "LAX-SEA": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "PHL-ATL": {
+      "training_row_count": 20,
+      "median_bid_rpm": 3.2813722849571954
+    },
+    "PHL-CHI": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "PHL-CMH": {
+      "training_row_count": 5,
+      "median_bid_rpm": 3.4545428652805468
+    },
+    "PHL-DEN": {
+      "training_row_count": 7,
+      "median_bid_rpm": 3.037003098424418
+    },
+    "PHL-DFW": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "PHL-EWR": {
+      "training_row_count": 2,
+      "median_bid_rpm": null
+    },
+    "PHL-JAX": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "PHL-LAX": {
+      "training_row_count": 7,
+      "median_bid_rpm": 2.652999589659417
+    },
+    "PHL-SEA": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "SEA-ATL": {
+      "training_row_count": 1,
+      "median_bid_rpm": null
+    },
+    "SEA-CHI": {
+      "training_row_count": 20,
+      "median_bid_rpm": 3.581740770394246
+    },
+    "SEA-CMH": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "SEA-DEN": {
+      "training_row_count": 19,
+      "median_bid_rpm": 3.1821238938053096
+    },
+    "SEA-DFW": {
+      "training_row_count": 2,
+      "median_bid_rpm": null
+    },
+    "SEA-EWR": {
+      "training_row_count": 2,
+      "median_bid_rpm": null
+    },
+    "SEA-JAX": {
+      "training_row_count": 3,
+      "median_bid_rpm": null
+    },
+    "SEA-LAX": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    },
+    "SEA-PHL": {
+      "training_row_count": 4,
+      "median_bid_rpm": null
+    }
+  },
+  "seen_lane_count": 88,
+  "eligible_lane_count": 41,
+  "sparse_lane_count": 47,
+  "training_rows_with_lane_reference": 627,
+  "fit_partition": "train",
+  "training_row_count": 756,
+  "units": "USD per loaded mile",
+  "target_column": "target_bid_rpm",
+  "source_sha256": "c0fcd88d358007fdeebadbb1e01dea069696ba9aec9eac4dcca6f57489f31a4c",
+  "training_date_range": {
+    "min": "2025-05-08 22:01:47",
+    "max": "2026-05-15 15:37:47"
+  },
+  "dataset_manifest_sha256": "6edac13f05868882e8d253735e6dd81d2fd509ac267a15fdcd785ed2e75766e2",
+  "training_files_sha256": {
+    "train/targets.csv": "d5f4cf01e03599137d5461c574e7f4b5bff04a738af58cb8b7ac02c53db12043",
+    "train/metadata.csv": "c92bea28d9354d7f45a34c5d382ea4cb75ab238ca073574191782da7f6e7c643",
+    "train/features.csv": "70d1efe28f5197ded8f6c2f7e9fa1383bc7625c3fa04924179cbe413680a2943"
+  },
+  "validation_test_policy": "No validation/test files read, no held-out metrics calculated",
+  "interpretation": "Historical submitted-bid reference; no profit or acceptance guarantee"
+}
