@@ -124,7 +124,7 @@ EXTERNAL_API_URL=http://your-board:8087 docker compose up --build -d
 
 The backend then enables ingestion, clock sync, and submission. The board contract is REST for snapshots and WebSocket for live events; the dispatcher never assumes the board is available.
 
-> The demo dataset and the board simulator are not part of this repository. The dispatcher is the product; the board is an external dependency.
+> The board simulator is not part of this repository. The dispatcher is the product; the board is an external dependency. The bundled `backend/data/seed.db` is a frozen capture used by the offline demo.
 
 ## Testing
 
